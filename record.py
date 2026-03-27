@@ -3,6 +3,13 @@ import subprocess
 import sys
 from pathlib import Path
 
+# Crear la carpeta del historial si no existe
+RECORD_FOLDER = Path(__file__).parent / "data"
+
+# Si existe, ignorar la creación
+RECORD_FOLDER.mkdir(exist_ok=True)
+
+# Directorio del archivo de historial
 RECORD_FILE = Path(__file__).parent / "data" / "record.txt"
 
 
@@ -10,7 +17,7 @@ def record_options():
     print("\nHistorial: ")
     print("    1. Ver los últimos resultados.")
     print("    2. Ver todo el historial.")
-    print("    3. Abrir el archivo del historial.")
+    print("    3. Abrir directorio del historial.")
     print("    4. Volver atrás")
 
 
@@ -26,7 +33,7 @@ def open_record_folder(path):
 def show_record():
     while True:
         record_options()
-        option = input("Escoja una opción para continuar:")
+        option = input("Escoja una opción para continuar: ")
 
         if option == "1":
             try:
