@@ -41,7 +41,7 @@ def show_record():
                 with open(RECORD_FILE, "r", encoding="UTF-8") as record:
                     attemps = record.readlines()
                     if attemps:
-                        recent = attemps[-5] if len(attemps) >= 5 else attemps
+                        recent = attemps[-5:] if len(attemps) >= 5 else attemps
                         for attemp in recent:
                             print("    " + attemp.strip())
                     else:
