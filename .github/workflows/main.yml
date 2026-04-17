@@ -1,4 +1,4 @@
-name: Build KanaTester
+name: Build KanaPy
 
 on:
   push:
