@@ -11,11 +11,11 @@ jobs:
       matrix:
         include:
           - os: ubuntu-latest
-            launcher: KanaTester.sh
+            launcher: KanaPy.sh
           - os: windows-latest
-            launcher: KanaTester.bat
+            launcher: KanaPy.bat
           - os: macos-latest
-            launcher: KanaTester.command
+            launcher: KanaPy.command
 
     runs-on: ${{ matrix.os }}
 
@@ -46,5 +46,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: KanaTester-${{ matrix.os }}
+          name: KanaPy-${{ matrix.os }}
           path: dist/

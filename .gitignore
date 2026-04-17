@@ -4,4 +4,3 @@ data/
 dist/
 build/
 *.spec
-.github/
