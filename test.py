@@ -11,13 +11,13 @@ def get_base_path():
 from char import hiragana
 
 # Crear la carpeta del historial si no existe
-RECORD_FOLDER = get_base_path().parent / "data"
+RECORD_FOLDER = get_base_path() / "data"
 
 # Si existe, ignorar la creación
 RECORD_FOLDER.mkdir(exist_ok=True)
 
 # Directorio del archivo de historial
-RECORD_FILE = get_base_path() "data" / "record.txt"
+RECORD_FILE = get_base_path() / "data" / "record.txt"
 
 # Obtener fecha
 now = datetime.now()
